@@ -117,10 +117,25 @@ blob@0.0.5:
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
+bootstrap-grid@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-grid/-/bootstrap-grid-3.0.1.tgz#1c316c756ff35abf15c9f9e236d063da6a5c3b10"
+  integrity sha512-KknujCSUh2186oAykDunjqxjafTKs/dktSQGyX0726RjmBFMfaYGTE2VppjfT634jFySPLGdS0jgTKknBlY2fg==
+
+bootstrap-reboot@4.5.6:
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/bootstrap-reboot/-/bootstrap-reboot-4.5.6.tgz#902927c584deff5752f445ada93b479af9adc527"
+  integrity sha512-V3czvZrmSQP6lmaaJE5spc4sFbqeNDHyjhVTj4EaeVgh5p2maQpDxr+fJP8GfasvP8RG2hWbka15r3Z+OXLwRw==
+
 bootstrap@5.2.3:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.3.tgz#54739f4414de121b9785c5da3c87b37ff008322b"
   integrity sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==
+
+bootstrap@5.3.3:
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.3.tgz#de35e1a765c897ac940021900fcbb831602bac38"
+  integrity sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
