@@ -4,21 +4,34 @@
 
 <footer>
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <ul class="list-inline text-center">
+    <div class="d-flex flex-md-row flex-column justify-content-evenly">
+      <div class="flex-item text-center">
+        <h4 class="fw-normal">Get in Touch</h4>
+        <ul class="list-inline small">
           {% if site.email %}
-          <li class="list-inline-item">
-            <a href="mailto:{{ site.email | encode_email }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
+          <li>
+            <a href="mailto:{{ site.email | encode_email }}">{{ site.email | encode_email }}</a>
           </li>
           {% endif %}
+          {% if site.phone_number %}
+          <li>
+            <a href="tel:{{ site.phone_number }}">{{ site.phone_number }}</a>
+          </li>
+          {% endif %}
+          {% if site.address %}
+          <li class="mt-2">
+            <address>
+              {{ site.address | newline_to_br }}
+            </address>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="flex-item text-center">
+        <h4 class="fw-normal">Stay Connected</h4>
+        <ul class="list-inline mt-3">
           {% if site.social_profiles.twitter %}
-          <li class="list-inline-item">
+          <li class="list-inline-item me-0">
             <a href="https://twitter.com/{{ site.social_profiles.twitter }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -28,7 +41,7 @@
           </li>
           {% endif %}
           {% if site.social_profiles.facebook %}
-          <li class="list-inline-item">
+          <li class="list-inline-item me-0">
             <a href="https://www.facebook.com/{{ site.social_profiles.facebook }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -38,7 +51,7 @@
           </li>
           {% endif %}
           {% if site.social_profiles.linkedin %}
-          <li class="list-inline-item">
+          <li class="list-inline-item me-0">
             <a href="https://www.linkedin.com/in/{{ site.social_profiles.linkedin }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -48,7 +61,7 @@
           </li>
           {% endif %}
           {% if site.social_profiles.github %}
-          <li class="list-inline-item">
+          <li class="list-inline-item me-0">
             <a href="https://github.com/{{ site.social_profiles.github }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -58,7 +71,7 @@
           </li>
           {% endif %}
           {% if site.social_profiles.instagram %}
-          <li class="list-inline-item">
+          <li class="list-inline-item me-0">
             <a href="https://instagram.com/{{ site.social_profiles.instagram }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -68,7 +81,7 @@
           </li>
           {% endif %}
           {% if site.social_profiles.tiktok %}
-          <li class="list-inline-item">
+          <li class="list-inline-item me-0">
             <a href="https://tiktok.com/{{ site.social_profiles.tiktok }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -78,7 +91,7 @@
           </li>
           {% endif %}
           {% if site.social_profiles.twitch %}
-          <li class="list-inline-item">
+          <li class="list-inline-item me-0">
             <a href="https://twitch.tv/{{ site.social_profiles.twitch }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -88,8 +101,10 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
       </div>
     </div>
+  </div>
+  <div class="d-flex flex-row justify-content-center">
+    <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
   </div>
 </footer>
