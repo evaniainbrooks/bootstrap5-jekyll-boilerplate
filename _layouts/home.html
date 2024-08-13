@@ -4,21 +4,18 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead"
+<header class="masthead bg-image"
   style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
-            {% endif %}
-          </div>
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="page-heading">
+          <h1>{{ site.title }}</h1>
+          {% if site.description %}
+          <span class="subheading">{{ site.description }}</span>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -59,7 +56,7 @@ layout: default
 
         <!-- Pager -->
         <div class="clearfix d-flex flex-row justify-content-end">
-          <a class="btn btn-primary flex-item text-white" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+          <a class="btn btn-primary flex-item text-white" href="{{" /posts" | relative_url }}">View All Posts &rarr;</a>
         </div>
 
       </div>
