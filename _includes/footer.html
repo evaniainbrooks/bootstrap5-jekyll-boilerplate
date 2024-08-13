@@ -21,7 +21,11 @@
           {% if site.address %}
           <li class="mt-2">
             <address>
+              {% if site.pin_location %}
+              <a href="{{ site.pin_location }}" target="_blank" rel="noopener noreferrer">{{ site.address | newline_to_br }}</a>
+              {% else %}
               {{ site.address | newline_to_br }}
+              {% endif %}
             </address>
           </li>
           {% endif %}
