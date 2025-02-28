@@ -1,21 +1,16 @@
-title:              Clean Blog
-email:              your-email@example.com
-address:            "23 Test Address\nCanada"
-phone_number:       1-800-123-4567
+title:              Fagan's Roofing & Exterior Renos
+email:              matt_fagan1@hotmail.com
+address:            "27 South Albion St\nAmherst, Nova Scotia\nCanada"
+phone_number:       1-902-665-1915
 description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
+author:             Matthew Fagan
 baseurl:            ""
 url:                "https://startbootstrap.github.io"
 
 pin_location: "https://maps.app.goo.gl/m9oZverv3qeV2Wjp8"
 social_profiles:
-  twitter:   SBootstrap
-  github:    StartBootstrap
-  facebook:  StartBootstrap
-  instagram:
-  linkedin:
-  tiktok:
-  twitch: TwitchTV
+  facebook:  redsealbuilder
+  instagram: redsealbuilder
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
@@ -31,10 +26,10 @@ plugins:
   - jekyll-gallery-generator
 
 gallery:
-  dir: media # Path to the gallery
+  dir: services # Path to the gallery
   symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
-  title: "Media Gallery"    # Title for gallery index page
-  title_prefix: "Media Gallery: "  # Title prefix for gallery pages. Gallery title = title_prefix + gallery_name
+  title: "Our Services"    # Title for gallery index page
+  title_prefix: "Our Services: "  # Title prefix for gallery pages. Gallery title = title_prefix + gallery_name
   sort_field: "date_time"   # How to sort galleries on the index page.
                             # Possible values are: title, date_time, best_image
   thumbnail_size:
@@ -42,7 +37,15 @@ gallery:
     y: 400                  # max height of thumbnails (in pixels)
   # The following options are for individual galleries.
   galleries:
-    default:
+    concrete:
       best_image: default.jpg
       info:
-        desc: "The default gallery image"
+        desc: "Concrete slabs, footings, ICF, building leveling, hearths and more."
+    roofing:
+      best_image: default.jpg
+      info:
+        desc: "Asphalt roofs, steel, or rubber, we do them all."
+    carpentry:
+      best_image: default.jpg
+      info:
+        desc: "Decks, gazebos, complete new builds, additions or extensions."

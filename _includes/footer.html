@@ -1,7 +1,4 @@
 <!-- Footer -->
-
-<hr>
-
 <footer>
   <div class="container">
     <div class="d-flex flex-md-row flex-column justify-content-evenly">
@@ -22,7 +19,8 @@
           <li class="mt-2">
             <address>
               {% if site.pin_location %}
-              <a href="{{ site.pin_location }}" target="_blank" rel="noopener noreferrer">{{ site.address | newline_to_br }}</a>
+              <a href="{{ site.pin_location }}" target="_blank" rel="noopener noreferrer">{{ site.address |
+                newline_to_br }}</a>
               {% else %}
               {{ site.address | newline_to_br }}
               {% endif %}
@@ -30,6 +28,10 @@
           </li>
           {% endif %}
         </ul>
+      </div>
+      <div class="flex-item text-center">
+        <img src="{{ 'img/red-seal.jpg' | prepend: site.baseurl | replace: '//', '/' }}" alt="{{ " Red Seal Certified" |
+          escape }}" class="img-fluid" style="max-width: 200px;">
       </div>
       <div class="flex-item text-center">
         <h4 class="fw-normal">Stay Connected</h4>
