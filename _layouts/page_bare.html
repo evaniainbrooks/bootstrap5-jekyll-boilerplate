@@ -12,11 +12,7 @@ layout: default
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="page-heading">
-          <h1>{{ page.masthead }}</h1>
-          {% if page.description %}
-          <span class="subheading">{{ page.description }}</span>
-          {% endif %}
-          <a href="#contact" class="btn btn-large btn-primary text-white my-2">Get A Free Quote</a>
+          <h1>{{ page.title }}</h1>
         </div>
       </div>
     </div>
@@ -24,16 +20,13 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-12 mx-auto">
 
         {{ content }}
 
       </div>
     </div>
   </div>
-
-  {% include services.html %}
-  {% include reviews.html %}
 
   {% if page.background %}
   <header class="masthead bg-image parallax" style="background-position: center bottom; background-image: url('{{ "img/bg-contact.jpg" | prepend: site.baseurl | replace: '//' , '/' }}')">
