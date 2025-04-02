@@ -12,11 +12,13 @@ layout: default
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="page-heading col-sm-9 col-12">
+          <img src="/logo.png" width="200" height="200" alt="Logo" />
           <h1>{{ page.masthead }}</h1>
           {% if page.description %}
           <span class="subheading">{{ page.description }}</span>
           {% endif %}
-          <a href="#contact" class="btn btn-large btn-primary text-white my-2">Get A Free Quote</a>
+          <a href="#contact" class="btn btn-large btn-primary text-white my-2 mt-4">Get A Free Quote</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn btn-large btn-danger text-white my-2 mt-4">Video</a>
         </div>
       </div>
     </div>
@@ -32,6 +34,7 @@ layout: default
     </div>
   </div>
 
+  {% include video_modal.html %}
   {% include services.html %}
   {% include reviews.html %}
 
