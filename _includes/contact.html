@@ -1,27 +1,27 @@
-<form method="POST" action="https://formspree.io/f/{{ page.formspree_id }}" name="sentMessage" id="contactForm">
+<form style="font-size: 16px" method="POST" action="https://formspree.io/f/{{ page.formspree_id }}" name="sentMessage" id="contactForm">
   <div class="mt-2">
     <div class="form-floating">
-      <label for="name" class=>Name</label>
       <input type="text" class="form-control" placeholder="Name" name="name" id="name" required>
+      <label for="name" class=>Name</label>
     </div>
   </div>
   <div class="mt-2">
     <div class="form-floating">
+      <input type="email" class="form-control" placeholder="name@email.com" name="email" id="email" required>
       <label for="email" class="required">Email Address</label>
-      <input type="email" class="form-control" placeholder="Email Address" name="email" id="email" required>
     </div>
   </div>
   <div class="mt-2">
     <div class="form-floating">
-      <label for="phone" class="required">Phone Number</label>
       <input type="tel" class="form-control" placeholder="Phone Number" name="phone" id="phone" required>
+      <label for="phone" class="required">Phone Number</label>
     </div>
   </div>
   <div class="mt-2">
     <div class="form-floating">
-      <label for="message" class="required">Message</label>
       <textarea style="height: 150px;" rows="5" class="form-control" placeholder="Message" name="message" id="message"
         required></textarea>
+      <label for="message" class="required">Message</label>
     </div>
   </div>
   <br>
