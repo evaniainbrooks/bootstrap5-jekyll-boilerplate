@@ -1,16 +1,16 @@
-title:              Fagan's Roofing & Exterior Renovations
-email:              matt_fagan1@hotmail.com
-address:            "27 South Albion St\nAmherst, Nova Scotia\nCanada"
-phone_number:       1-902-665-1915
-description:        Servicing Cumberland and Westmorland Counties
-author:             Matthew Fagan
+title:              Port to Port Property Maintenence & Lawn Care
+email:              dave@porttoport.ca
+address:            "7294 NS-366, Northport, NS B0L 1E0"
+phone_number:       (506)-540-0207
+description:        Servicing Port Elgin, Tidnish, Northport, Pugwash, Wallace and surrounding areas!
+author:             David Thomas
 baseurl:            ""
-url:                "https://startbootstrap.github.io"
+url:                "https://www.porttoport.ca"
 
-pin_location: "https://maps.app.goo.gl/m9oZverv3qeV2Wjp8"
+pin_location: "https://maps.app.goo.gl/nx8BK1oADZcFpxBW8"
 social_profiles:
-  facebook:  redsealbuilder
-  instagram: redsealbuilder
+  facebook:  Port-To-Port-Property-Maintenance-Lawn-Care-61569891131400
+  instagram: porttoport
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   G-6K0FGM8G6X
