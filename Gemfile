@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-ruby '2.7.2'
-
 source 'https://rubygems.org'
 
+gem 'csv'
+gem 'logger'
 gem 'jekyll', '>= 3.8.5'
 
 group :jekyll_plugins do
