@@ -2,9 +2,10 @@
 
 source 'https://rubygems.org'
 
+gem 'base64'
 gem 'csv'
-gem 'logger'
 gem 'jekyll', '>= 3.8.5'
+gem 'logger'
 
 group :jekyll_plugins do
   gem 'jekyll-feed', '~> 0.6'
