@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 
+gem 'observer'
 gem 'base64'
 gem 'csv'
 gem 'jekyll', '>= 3.8.5'
