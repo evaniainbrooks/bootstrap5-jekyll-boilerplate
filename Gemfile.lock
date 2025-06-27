@@ -132,8 +132,5 @@ DEPENDENCIES
   standardrb
   tzinfo-data
 
-RUBY VERSION
-   ruby 3.3.1p55
-
 BUNDLED WITH
    2.3.26
