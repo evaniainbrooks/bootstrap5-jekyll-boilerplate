@@ -37,15 +37,15 @@ gallery:
     y: 400                  # max height of thumbnails (in pixels)
   # The following options are for individual galleries.
   galleries:
-    concrete:
+    landscaping:
       best_image: default.jpg
       info:
-        desc: "Concrete slabs, footings, ICF, building leveling, hearths and more."
-    roofing:
+        desc: Stone patios and walkways, flower beds and firepits. Hedges, ground cover and other hardscape projects.
+    lawn-mowing:
       best_image: default.jpg
       info:
-        desc: "Asphalt roofs, steel, or rubber, we do them all."
-    carpentry:
+        desc: Zero turn mowing, edging, striping, clean up and amendments.
+    property-maintenance:
       best_image: default.jpg
       info:
-        desc: "Decks, gazebos, complete new builds, additions or extensions."
+        desc: Tree cutting, trimming, mulching and raking. Light demolition and debris removal.
