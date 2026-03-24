@@ -3,3 +3,10 @@
 <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/scripts.js" | relative_url }}"></script>
 
 <script src="{{"/assets/scripts.js" | relative_url }}"></script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('contacted') === '1') {
+    alert('Thank you for contacting us! We will get back to you as soon as possible.');
+  }
+</script>
