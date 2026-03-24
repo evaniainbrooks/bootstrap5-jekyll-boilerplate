@@ -26,16 +26,7 @@
   {% assign og_title = page.title | default: site.title | escape %}
   {% assign og_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
   {% assign og_url = page.url | replace:'index.html','' | absolute_url %}
-  {% if page.background %}
-    {% assign og_image = page.background | prepend: site.url %}
-  {% else %}
-    {% assign og_image = "/og.png" | prepend: site.url %}
-  {% endif %}
-  {% if page.layout == "post" %}
-    {% assign og_type = "article" %}
-  {% else %}
-    {% assign og_type = "website" %}
-  {% endif %}
+  {% assign og_image = "/og.png" | prepend: site.url %}
 
   <meta property="og:type" content="{{ og_type }}"/>
   <meta property="og:site_name" content="{{ site.title | escape }}"/>
