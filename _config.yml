@@ -40,12 +40,27 @@ gallery:
     landscaping:
       best_image: default.jpg
       info:
-        desc: Stone patios and walkways, flower beds and firepits. Hedges, ground cover and other hardscape projects.
+        desc: Turn your yard into an outdoor space you actually use. From flagstone patios to fire pits and flower beds, we design and build hardscaping that adds lasting value to your property — built to handle the Nova Scotia seasons.
+        background: /services/landscaping/20240723_121954.jpg
+        features:
+          - "Stone patios & fire pits"
+          - "Flower beds & ground cover"
+          - "Retaining walls & hardscaping"
     lawn-mowing:
       best_image: default.jpg
       info:
-        desc: Zero turn mowing, edging, striping, clean up and amendments.
+        desc: A well-kept lawn makes a strong first impression. We show up on schedule, cut clean, and leave your property looking sharp — so you can enjoy your weekends instead of spending them behind a mower.
+        background: /services/lawn-mowing/20240614_180833.jpg
+        features:
+          - "Zero-turn mowing & striping"
+          - "Edging & whipper snipping"
+          - "Spring & fall cleanup"
     property-maintenance:
       best_image: default.jpg
       info:
-        desc: Tree cutting, trimming, mulching and raking. Light demolition and debris removal.
+        desc: Keep your property safe, tidy, and manageable year-round. Whether it's overgrown trees, accumulated debris, or a structure that needs to come down, we handle the heavy work so you don't have to.
+        background: /services/property-maintenance/20240611_172253.jpg
+        features:
+          - "Tree cutting & trimming"
+          - "Light demolition & debris removal"
+          - "Planting, fertilizing & seeding"

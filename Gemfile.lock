@@ -22,9 +22,9 @@ GEM
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     exifr (1.4.0)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0)
     forwardable-extended (2.6.0)
-    google-protobuf (4.28.3-x86_64-linux)
+    google-protobuf (4.28.3)
       bigdecimal
       rake (>= 13)
     http_parser.rb (0.8.0)
@@ -68,6 +68,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
+    observer (0.1.2)
     parallel (1.26.3)
     parser (3.3.6.0)
       ast (~> 2.4.1)
@@ -135,6 +136,7 @@ DEPENDENCIES
   jekyll-paginate (~> 1.1.0)
   jekyll-sitemap
   logger
+  observer
   standardrb
   tzinfo-data
 

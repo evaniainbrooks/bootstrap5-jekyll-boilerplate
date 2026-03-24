@@ -1,18 +1,31 @@
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-body mx-auto">
-        <div class="embed-responsive embed-responsive-16by9">
-          <video controls autoplay>
-            <source src="concrete.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">Close</span>
-        </button>
-        <a href="/services/concrete" class="btn btn-primary text-white">See More</a>
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-black border-0">
+      <div class="modal-body p-0 text-center">
+        <video id="introVideo" controls autoplay muted playsinline
+          style="max-height: 75vh; max-width: 100%; display: block; margin: 0 auto;">
+          <source src="intro.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="modal-footer justify-content-center border-0 bg-black pb-3">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="/services/lawn-mowing" class="btn btn-primary text-white">See More</a>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  (function () {
+    var modal = document.getElementById('videoModal');
+    var video = document.getElementById('introVideo');
+    modal.addEventListener('show.bs.modal', function () {
+      video.currentTime = 0;
+      video.play();
+    });
+    modal.addEventListener('hide.bs.modal', function () {
+      video.pause();
+      video.currentTime = 0;
+    });
+  })();
+</script>

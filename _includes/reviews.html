@@ -1,113 +1,214 @@
-<section style="color: #000; background-color: #f3f2f2;">
+<section class="reviews-section">
+  <style>
+    .reviews-section {
+      background-color: #f8f9f8;
+      border-top: 4px solid #1d9e40;
+    }
+    .review-scroll-wrap {
+      position: relative;
+    }
+    .review-scroll-container {
+      display: flex;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0.5rem 0.25rem 1rem;
+    }
+    .review-scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+    .review-card {
+      flex: 0 0 320px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    }
+    .review-quote-mark {
+      font-family: Georgia, serif;
+      font-size: 80px;
+      line-height: 1;
+      color: #1d9e40;
+      opacity: 0.25;
+      margin-bottom: -20px;
+      display: block;
+    }
+    .review-text {
+      font-style: italic;
+      font-size: 0.97rem;
+      color: #333;
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+    .review-stars i {
+      color: #f5a623;
+      font-size: 0.9rem;
+    }
+    .review-author {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #111;
+    }
+    .review-location {
+      font-size: 0.82rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .review-date {
+      font-size: 0.78rem;
+      color: #bbb;
+      margin-top: 2px;
+    }
+    .review-scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      color: #1d9e40;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s;
+    }
+    .review-scroll-btn:hover {
+      background: #1d9e40;
+      color: #fff;
+    }
+    .review-scroll-btn.prev { left: -20px; }
+    .review-scroll-btn.next { right: -20px; }
+  </style>
+
   <div class="container py-5">
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-10 col-xl-8 text-center">
-        <h3 class="fw-bold mb-4">Testimonials</h3>
-        <p class="mb-4 pb-2 mb-md-5 pb-md-0">
-          We are proud to have countless satisfied customers who are happy to share their positive experiences with
-          our services. Have peace of mind choosing Port to Port Property Maintenance.
-        </p>
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-8 text-center">
+        <h3 class="fw-bold mb-3">What Our Customers Say</h3>
+        <p class="text-muted mb-0">Real feedback from real neighbours along the north shore.</p>
       </div>
     </div>
 
-    <div class="row text-center">
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="card">
-          <div class="card-body py-4 mt-2">
-            <div class="d-flex justify-content-center mb-4">
-              <img src="avatar.jpg" class="rounded-circle shadow-1-strong" width="100" height="100" />
+    <div class="review-scroll-wrap">
+      <button class="review-scroll-btn prev" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="review-scroll-container" id="reviewScroll">
+
+        <div class="card review-card p-4">
+          <span class="review-quote-mark">&ldquo;</span>
+          <p class="review-text mb-4">
+            Davey has been looking after my property for years. Trimming trees, cleanup after Fiona,
+            mowing and cleaning up my perennial gardens in the Fall.
+            A great guy &mdash; hard working, neat and tidy with reasonable prices.
+            You deserve nothing but success. Congratulations!!
+          </p>
+          <div>
+            <div class="review-stars mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
             </div>
-            <h5 class="font-weight-bold">Catherine from Pugwash</h5>
-            <ul class="list-unstyled d-flex justify-content-center">
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star-half-alt fa-sm text-info"></i>
-              </li>
-            </ul>
-            <p class="mb-2">
-              <i class="fas fa-quote-left pe-2"></i>
-              Davey has been looking after my property for years. Trimming trees, cleanup after Fiona,
-              he mows and trims and cleans up my perennial gardens in the Fall.
-              A great guy, hard working, neat and tidy with reasonable prices.
-              So happy to see your business growing Davey. You deserve nothing but success. Congratulations!!
-            </p>
+            <div class="review-author">Catherine</div>
+            <div class="review-location">Pugwash, NS</div>
+            <div class="review-date">May 2024</div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="card">
-          <div class="card-body py-4 mt-2">
-            <div class="d-flex justify-content-center mb-4">
-              <img src="avatar.jpg" class="rounded-circle shadow-1-strong" width="100" height="100" />
+
+        <div class="card review-card p-4">
+          <span class="review-quote-mark">&ldquo;</span>
+          <p class="review-text mb-4">
+            Davey has been cutting my grass, removing trees and doing other maintenance at my cottage for a few years.
+            He is very reliable, a fast worker and does an excellent job. I highly recommend him.
+          </p>
+          <div>
+            <div class="review-stars mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            <h5 class="font-weight-bold">Bernie from Port Howe</h5>
-            <ul class="list-unstyled d-flex justify-content-center">
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-            </ul>
-            <p class="mb-2">
-              <i class="fas fa-quote-left pe-2"></i>
-              Davey has been cutting my grass , removing trees and doing other maintenance at my cottage for a few years. 
-              He is very reliable, is a fast worker and does an excellent job. I highly recommend him.
-            </p>
+            <div class="review-author">Bernie</div>
+            <div class="review-location">Port Howe, NS</div>
+            <div class="review-date">August 2024</div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-0">
-        <div class="card">
-          <div class="card-body py-4 mt-2">
-            <div class="d-flex justify-content-center mb-4">
-              <img src="avatar.jpg" class="rounded-circle shadow-1-strong" width="100" height="100" />
+
+        <div class="card review-card p-4">
+          <span class="review-quote-mark">&ldquo;</span>
+          <p class="review-text mb-4">
+            I have found Davey to be reliable and to do a great job with good attention to detail.
+            I would highly recommend him.
+          </p>
+          <div>
+            <div class="review-stars mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            <h5 class="font-weight-bold">Holly from Port Elgin</h5>
-            <ul class="list-unstyled d-flex justify-content-center">
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-              <li>
-                <i class="fas fa-star fa-sm text-info"></i>
-              </li>
-            </ul>
-            <p class="mb-2">
-              <i class="fas fa-quote-left pe-2"></i>
-              I have found Davey to be reliable and to do a great job with good attention to detail. I would highly recommend him.
-            </p>
+            <div class="review-author">Holly</div>
+            <div class="review-location">Port Elgin, NS</div>
+            <div class="review-date">November 2024</div>
           </div>
         </div>
+
+        <div class="card review-card p-4">
+          <span class="review-quote-mark">&ldquo;</span>
+          <p class="review-text mb-4">
+            Dave did a great job. Efficient and precise. He was responsive to messages and friendly and professional. Great service!
+          </p>
+          <div>
+            <div class="review-stars mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="review-author">Beth</div>
+            <div class="review-location">Northport, NS</div>
+            <div class="review-date">March 2025</div>
+          </div>
+        </div>
+
       </div>
+
+      <button class="review-scroll-btn next" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var container = document.getElementById('reviewScroll');
+      var cardWidth = 320 + 20; // card width + gap
+      document.querySelector('.review-scroll-btn.prev').addEventListener('click', function () {
+        container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      });
+      document.querySelector('.review-scroll-btn.next').addEventListener('click', function () {
+        container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      });
+    })();
+  </script>
 </section>

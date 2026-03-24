@@ -1,33 +1,139 @@
 ---
 layout: page_bare
 ---
-<style TYPE="text/css">
-  .gallery-image-wrapper {
-    height: 300px;
-    width: 300px;
-    display: inline-block;
-    margin: 1em;
-    position: relative;
-  }
+{% assign carousel_id = page.gallery | append: "-carousel" %}
+{% assign gallery_info = site.gallery.galleries[page.gallery].info %}
+{% assign image_count = page.images | size %}
 
-  .gallery-image {
-    margin: auto;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    max-height: 100%;
-    max-width: 100%;
-  }
+<style>
+  .gallery-thumb { opacity: 0.45; transition: opacity 0.2s, border-color 0.2s, border-width 0.2s; }
+  .gallery-thumb.active { opacity: 1; border-color: var(--bs-primary) !important; border-width: 3px !important; }
 </style>
-<h3>{{ site.gallery.galleries[page.gallery].info.desc }}</h3>
-<hr />
-<div class="row">
-  {% for image in page.images %}
-  <div class="gallery-image-wrapper">
-    <a name="{{ image.name }}"></a>
-    <a href="{{ image.name }}" {% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]" {% endif %}>
-      <img class="gallery-image" src="thumbs/{{ image.name }}" />
-    </a>
+
+<!-- ── Section 1: Service intro ─────────────────────────── -->
+<div class="py-4">
+  <p class="lead mb-4">{{ gallery_info.desc }}</p>
+
+  {% if gallery_info.features %}
+  <div class="d-flex flex-wrap gap-2 mb-4">
+    {% for f in gallery_info.features %}
+    <span class="badge rounded-pill bg-success fs-6 fw-normal px-3 py-2">
+      <i class="fas fa-check me-1"></i>{{ f }}
+    </span>
+    {% endfor %}
   </div>
-  {% endfor %}
+  {% endif %}
+
+  <a href="/#contact" class="btn btn-primary btn-lg text-white">Get a Free Quote &rarr;</a>
 </div>
+
+<hr class="my-2" />
+
+<!-- ── Section 2: Photo gallery ─────────────────────────── -->
+<div class="py-4">
+  <h4 class="mb-4">Our Work</h4>
+
+  <div id="{{ carousel_id }}" class="carousel slide mb-3 position-relative" data-bs-ride="false">
+
+    <!-- Photo counter -->
+    <span id="{{ carousel_id }}-counter"
+      class="badge bg-dark bg-opacity-75 fs-6 position-absolute"
+      style="top: 10px; right: 10px; z-index: 10;">
+      1 / {{ image_count }}
+    </span>
+
+    <!-- Position indicators (dots) -->
+    <div class="carousel-indicators">
+      {% for image in page.images %}
+      <button type="button"
+        data-bs-target="#{{ carousel_id }}"
+        data-bs-slide-to="{{ forloop.index0 }}"
+        {% if forloop.first %}class="active" aria-current="true"{% endif %}
+        aria-label="Slide {{ forloop.index }}"></button>
+      {% endfor %}
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      {% for image in page.images %}
+      <div class="carousel-item{% if forloop.first %} active{% endif %}">
+        <img src="{{ image.name }}"
+          class="d-block mx-auto"
+          style="max-height: 520px; width: 100%; object-fit: contain; background: #1a1a1a;"
+          alt="Gallery image {{ forloop.index }}" />
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Prev / Next controls -->
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#{{ carousel_id }}" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#{{ carousel_id }}" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="d-flex flex-wrap gap-2">
+    {% for image in page.images %}
+    <img src="thumbs/{{ image.name }}"
+      class="gallery-thumb img-thumbnail{% if forloop.first %} active{% endif %}"
+      style="height: 80px; width: auto; cursor: pointer; object-fit: cover;"
+      data-slide-to="{{ forloop.index0 }}"
+      alt="Thumbnail {{ forloop.index }}" />
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ── Section 3: Other services ────────────────────────── -->
+{% assign all_services = "lawn-mowing,landscaping,property-maintenance" | split: "," %}
+{% assign other_services = "" | split: "" %}
+{% for service in all_services %}
+  {% unless service == page.gallery %}
+    {% assign other_services = other_services | push: service %}
+  {% endunless %}
+{% endfor %}
+{% if other_services.size > 0 %}
+<hr class="my-2" />
+<div class="py-4">
+  <h5 class="text-muted mb-3">Also Offered</h5>
+  <div class="d-flex flex-wrap gap-3">
+    {% for service in other_services %}
+    {% assign service_label = service | replace: "-", " " | capitalize %}
+    <a href="/services/{{ service }}" class="btn btn-outline-primary btn-lg">
+      {{ service_label }}
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<script>
+  window.addEventListener('load', function () {
+    var carouselEl = document.getElementById('{{ carousel_id }}');
+    var carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+    var thumbs = document.querySelectorAll('.gallery-thumb');
+    var counter = document.getElementById('{{ carousel_id }}-counter');
+    var total = {{ image_count }};
+
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        carousel.to(parseInt(this.dataset.slideTo));
+        carouselEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+    carouselEl.addEventListener('slide.bs.carousel', function (e) {
+      thumbs.forEach(function (t) {
+        t.classList.toggle('active', parseInt(t.dataset.slideTo) === e.to);
+      });
+      counter.textContent = (e.to + 1) + ' / ' + total;
+    });
+  });
+</script>

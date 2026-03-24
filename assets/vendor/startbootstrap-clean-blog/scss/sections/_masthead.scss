@@ -11,11 +11,11 @@ header.masthead {
     .page-heading,
     .post-heading,
     .site-heading {
-        padding: 200px 0 150px;
+        padding: 130px 0 90px;
         color: white;
 
         @media only screen and (min-width: 768px) {
-            padding: 200px 0;
+            padding: 140px 0;
         }
     }
 
@@ -24,7 +24,7 @@ header.masthead {
         text-align: center;
 
         h1 {
-            font-size: 50px;
+            font-size: 34px;
             margin-top: 0;
         }
 
@@ -39,7 +39,7 @@ header.masthead {
 
         @media only screen and (min-width: 768px) {
             h1 {
-                font-size: 80px;
+                font-size: 54px;
             }
         }
     }

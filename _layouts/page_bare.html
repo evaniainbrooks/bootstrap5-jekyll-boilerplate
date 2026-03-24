@@ -3,9 +3,13 @@ layout: default
 ---
 
 <!-- Page Header -->
-{% if page.background %}
+{% assign _bg = page.background %}
+{% if _bg == nil and page.gallery %}
+  {% assign _bg = site.gallery.galleries[page.gallery].info.background %}
+{% endif %}
+{% if _bg %}
 <header class="masthead bg-image parallax"
-  style="background-position: 50% 0px; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  style="background-position: 50% 0px; background-image: url('{{ _bg | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
