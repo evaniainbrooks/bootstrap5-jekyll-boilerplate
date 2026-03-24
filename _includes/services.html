@@ -1,71 +1,140 @@
-<div class="section pb-4 text-center" id="services">
+<style>
+  .services-section {
+    background: #fff;
+    padding: 5rem 0;
+  }
+  .services-section .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1d9e40;
+    margin-bottom: 0.5rem;
+  }
+  .service-card {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    transition: transform 0.22s, box-shadow 0.22s;
+    height: 100%;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+  }
+  .service-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .service-card .card-body {
+    padding: 1.5rem;
+  }
+  .service-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .service-card .service-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.55;
+  }
+  .service-card .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+  }
+  .service-card .service-features li {
+    font-size: 0.85rem;
+    color: #444;
+    padding: 3px 0;
+  }
+  .service-card .service-features li i {
+    color: #1d9e40;
+    width: 16px;
+    margin-right: 6px;
+  }
+  .service-card .btn-service {
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+</style>
+
+<div class="services-section" id="services">
   <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-10 col-xl-8 text-center">
-        <h3 class="fw-bold mb-4">Services</h3>
-        <p class="mb-4 pb-2 mb-md-5 pb-md-0">
-          Port to Port Lawn Care and Property Maintenance offers a wide range of
-          services to meet your lawn care and property maintenance needs. From
-          spring planting to fall cleanup, we are here to make your property goals
-          a reality.
-        </p>
-        <p>
-          Localled owned and operated, and based out of Northport, Nova Scotia, 
-          we serve cottages, homes and businesses all along the north shore. From Port Elgin to 
-          Amherst Shore, Wallace and Pugwash and other areas in Cumberland and Westmorland counties.
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-8 text-center">
+        <p class="section-label">What We Offer</p>
+        <h2 class="fw-bold mb-3">Services Built Around Your Property</h2>
+        <p class="text-muted">
+          Locally owned and operated out of Northport, Nova Scotia — we serve cottages, homes,
+          and businesses along the north shore from spring through fall.
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card my-2">
-          <div class="card-body">
-            <img src="mow.png" class="rounded-circle" width="100" height="100" alt="Lawn Mowing" />
-            <h3>Lawn Mowing</h3>
-            <ul class="list-unstyled">
-              <li class="text-secondary small">Zero turn mowing</li>
-              <li class="text-secondary small">Lawn striping</li>
-              <li class="text-secondary small">Edging and whipper snipping</li>
-            </ul>
+
+    <div class="row g-4">
+
+      <div class="col-md-4 d-flex">
+        <a href="/services/lawn-mowing">
+          <div class="card service-card">
+            <img src="/services/lawn-mowing/default.jpg" class="service-card-img" alt="Lawn Mowing" />
+            <div class="card-body d-flex flex-column">
+              <h4>Lawn Mowing</h4>
+              <p class="service-desc">A well-kept lawn makes a strong first impression. We show up on schedule and leave your property looking sharp.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i>Zero-turn mowing &amp; striping</li>
+                <li><i class="fas fa-check"></i>Edging &amp; whipper snipping</li>
+                <li><i class="fas fa-check"></i>Spring &amp; fall cleanup</li>
+              </ul>
+              <a href="/services/lawn-mowing" class="btn btn-primary text-white btn-service mt-auto">See Our Work &rarr;</a>
+            </div>
           </div>
-          <div class="card-footer text-light bg-primary">
-            <a href="/services/lawn-mowing" class="text-uppercase text-light">learn more</a>
-          </div>
-        </div>
+        </a>
       </div>
-      <div class="col-md-4">
-        <div class="card my-2">
-          <div class="card-body">
-            <img src="maintenance.png" class="rounded-circle" width="100" height="100"
-              alt="Property Maintenance" />
-            <h3>Property Maintenance</h3>
-            <ul class="list-unstyled">
-              <li class="text-secondary small">Tree cutting, trimming, mulching and raking</li>
-              <li class="text-secondary small">Light demolition and debris removal</li>
-              <li class="text-secondary small">Planting, fertilizing and seeding</li>
-            </ul>
+
+      <div class="col-md-4 d-flex">
+        <a href="/services/property-maintenance">
+          <div class="card service-card">
+            <img src="/services/property-maintenance/default.jpg" class="service-card-img" alt="Property Maintenance" />
+            <div class="card-body d-flex flex-column">
+              <h4>Property Maintenance</h4>
+              <p class="service-desc">Keep your property safe and manageable year-round. We handle the heavy work so you don't have to.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i>Tree cutting &amp; trimming</li>
+                <li><i class="fas fa-check"></i>Light demolition &amp; debris removal</li>
+                <li><i class="fas fa-check"></i>Planting, fertilizing &amp; seeding</li>
+              </ul>
+              <a href="/services/property-maintenance" class="btn btn-primary text-white btn-service mt-auto">See Our Work &rarr;</a>
+            </div>
           </div>
-          <div class="card-footer text-light bg-primary">
-            <a href="/services/property-maintenance" class="text-uppercase text-light">learn more</a>
-          </div>
-        </div>
+        </a>
       </div>
-      <div class="col-md-4">
-        <div class="card my-2">
-          <div class="card-body">
-            <img src="landscape.png" class="rounded-circle" width="100" height="100" alt="Landscaping" />
-            <h3>Landscaping</h3>
-            <ul class="list-unstyled">
-              <li class="text-secondary small">Stone patios and walkways</li>
-              <li class="text-secondary small">Flower beds and fire pits</li>
-              <li class="text-secondary small">Retaining walls and hardscaping</li>
-            </ul>
+
+      <div class="col-md-4 d-flex">
+        <a href="/services/landscaping">
+          <div class="card service-card">
+            <img src="/services/landscaping/default.jpg" class="service-card-img" alt="Landscaping" />
+            <div class="card-body d-flex flex-column">
+              <h4>Landscaping</h4>
+              <p class="service-desc">Turn your yard into an outdoor space you actually use. We design and build hardscaping that adds lasting value.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i>Stone patios &amp; fire pits</li>
+                <li><i class="fas fa-check"></i>Flower beds &amp; ground cover</li>
+                <li><i class="fas fa-check"></i>Retaining walls &amp; hardscaping</li>
+              </ul>
+              <a href="/services/landscaping" class="btn btn-primary text-white btn-service mt-auto">See Our Work &rarr;</a>
+            </div>
           </div>
-          <div class="card-footer text-light bg-primary">
-            <a href="/services/landscaping" class="text-uppercase text-light">learn more</a>
-          </div>
-        </div>
+        </a>
       </div>
+
     </div>
   </div>
 </div>

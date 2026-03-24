@@ -2,24 +2,95 @@
 layout: default
 ---
 
+<style>
+  .hero-masthead .mask {
+    background: linear-gradient(160deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.65) 100%);
+  }
+  .hero-masthead .page-heading {
+    padding: 160px 0 120px;
+  }
+  @media (min-width: 768px) {
+    .hero-masthead .page-heading {
+      padding: 180px 0 160px;
+    }
+  }
+  .hero-location-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+  .hero-masthead h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  @media (min-width: 768px) {
+    .hero-masthead h1 { font-size: 3.6rem; }
+  }
+  .hero-slogan {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 0.35rem;
+  }
+  @media (min-width: 768px) {
+    .hero-slogan { font-size: 1.35rem; }
+  }
+  .hero-description {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  .hero-ctas .btn {
+    min-width: 160px;
+    font-size: 1rem;
+  }
+</style>
+
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead bg-image parallax"
+<header class="masthead hero-masthead bg-image parallax"
   style="background-position: 50% 0px; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
-  <header class="masthead">
+  <header class="masthead hero-masthead">
     {% endif %}
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
+    <div class="mask">
       <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="page-heading col-sm-9 col-12">
-          <img src="/logo.png" width="200" height="200" alt="Logo" />
-          <h1>{{ page.masthead }}</h1>
-          {% if page.description %}
-          <span class="subheading">{{ page.description }}</span>
+        <div class="page-heading col-sm-9 col-11">
+          <img src="/logo.png" width="120" height="120" alt="Port to Port Logo" class="d-block mx-auto mb-3" style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));" />
+          {% if page.location %}
+          <span class="hero-location-badge">
+            <i class="fas fa-map-marker-alt me-1"></i>{{ page.location }}
+          </span>
           {% endif %}
-          <a href="#contact" class="btn btn-large btn-primary text-white my-2 mt-4">Get A Free Quote</a>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal"
-            class="btn btn-large btn-danger text-white my-2 mt-4">Video</a>
+          <h1>{{ page.masthead }}</h1>
+          {% if page.slogan %}
+          <p class="hero-slogan">{{ page.slogan }} &mdash; Port to Port</p>
+          {% endif %}
+          {% if page.description %}
+          <p class="hero-description">{{ page.description }}</p>
+          {% endif %}
+          <div class="hero-ctas d-flex flex-wrap justify-content-center gap-3 mt-3">
+            <a href="#contact" class="btn btn-primary btn-lg text-white px-4">
+              Get A Free Quote
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal"
+              class="btn btn-danger btn-lg px-4 text-white">
+              <i class="fas fa-play me-2"></i>Watch Video
+            </a>
+          </div>
         </div>
       </div>
     </div>
