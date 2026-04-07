@@ -1,16 +1,16 @@
-title:              Port to Port Property Maintenance & Lawn Care
-email:              dave@porttoport.ca
-address:            "7294 NS-366, Northport, NS B0L 1E0"
-phone_number:       (506)-540-0207
-description:        Servicing Port Elgin, Tidnish, Northport, Pugwash, Wallace and surrounding areas!
-author:             David Thomas
+title:              Mudcreek Forest Products
+email:              evan@mudcreekforest.ca
+address:            "Mud Creek Road, Northport, NS B0L 1E0"
+phone_number:       (902)-297-7781
+description:        Natural forest products locally sourced in Northport, Nova Scotia
+author:             Evan Brooks
 baseurl:            ""
-url:                "https://www.porttoport.ca"
+url:                "https://www.mudcreekforest.ca"
 
 pin_location: "https://maps.app.goo.gl/nx8BK1oADZcFpxBW8"
 social_profiles:
-  facebook:  Port-To-Port-Property-Maintenance-Lawn-Care-61569891131400
-  instagram: porttoport
+  facebook:  mudcreekforest
+  instagram: mudcreekforest
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   G-6K0FGM8G6X
