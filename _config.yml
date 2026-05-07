@@ -1,16 +1,16 @@
-title:              Port to Port Property Maintenance & Lawn Care
-email:              dave@porttoport.ca
-address:            "7294 NS-366, Northport, NS B0L 1E0"
+title:              Cumberland Shingles
+email:              info@cumberlandshingles.ca
+address:            "Northport, NS"
 phone_number:       (506)-540-0207
-description:        Servicing Port Elgin, Tidnish, Northport, Pugwash, Wallace and surrounding areas!
-author:             David Thomas
+description:        Locally owned and operated shingle roofing out of Northport, Nova Scotia — serving Cumberland County and surrounding areas.
+author:             Cumberland Shingles
 baseurl:            ""
-url:                "https://www.porttoport.ca"
+url:                "https://www.cumberlandshingles.ca"
 
 pin_location: "https://maps.app.goo.gl/nx8BK1oADZcFpxBW8"
 social_profiles:
-  facebook:  Port-To-Port-Property-Maintenance-Lawn-Care-61569891131400
-  instagram: porttoport
+  facebook:  cumberlandshingles
+  instagram: cumberlandshingles
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   G-6K0FGM8G6X
@@ -37,30 +37,30 @@ gallery:
     y: 400                  # max height of thumbnails (in pixels)
   # The following options are for individual galleries.
   galleries:
-    landscaping:
+    shingle-installation:
       best_image: default.jpg
       info:
-        desc: Turn your yard into an outdoor space you actually use. From flagstone patios to fire pits and flower beds, we design and build hardscaping that adds lasting value to your property — built to handle the Nova Scotia seasons.
-        background: /services/landscaping/20240723_121954.jpg
+        desc: A new shingle roof is the best investment you can make in your home. We install quality asphalt shingles built to handle Nova Scotia's harshest seasons — done right the first time, backed by our workmanship.
+        background: /services/shingle-installation/default.jpg
         features:
-          - "Stone patios & fire pits"
-          - "Flower beds & ground cover"
-          - "Retaining walls & hardscaping"
-    lawn-mowing:
+          - "Full roof replacements"
+          - "Asphalt shingle installation"
+          - "Drip edge & ice & water shield"
+    roof-repairs:
       best_image: default.jpg
       info:
-        desc: A well-kept lawn makes a strong first impression. We show up on schedule, cut clean, and leave your property looking sharp — so you can enjoy your weekends instead of spending them behind a mower.
-        background: /services/lawn-mowing/20240614_180833.jpg
+        desc: Leaks, missing shingles, damaged flashing — we find the problem and fix it properly. Fast turnaround so small issues don't turn into expensive ones.
+        background: /services/roof-repairs/default.jpg
         features:
-          - "Zero-turn mowing & striping"
-          - "Edging & whipper snipping"
-          - "Spring & fall cleanup"
-    property-maintenance:
+          - "Leak detection & repair"
+          - "Missing or damaged shingles"
+          - "Flashing & vent repair"
+    roof-inspection:
       best_image: default.jpg
       info:
-        desc: Keep your property safe, tidy, and manageable year-round. Whether it's overgrown trees, accumulated debris, or a structure that needs to come down, we handle the heavy work so you don't have to.
-        background: /services/property-maintenance/20240611_172253.jpg
+        desc: Not sure what shape your roof is in? We offer thorough inspections and honest assessments so you know exactly what you're dealing with — no upsells, no pressure.
+        background: /services/roof-inspection/default.jpg
         features:
-          - "Tree cutting & trimming"
-          - "Light demolition & debris removal"
-          - "Planting, fertilizing & seeding"
+          - "Full roof condition report"
+          - "Pre-sale & insurance inspections"
+          - "Free estimates on all work"
