@@ -8,6 +8,7 @@ baseurl:            ""
 url:                "https://www.cumberlandshingles.ca"
 
 pin_location: "https://maps.app.goo.gl/nx8BK1oADZcFpxBW8"
+facebook_verification: # paste your Facebook domain verification code here
 social_profiles:
   facebook:  cumberlandshingles
   instagram: cumberlandshingles
