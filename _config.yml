@@ -1,16 +1,15 @@
-title:              Port to Port Property Maintenance & Lawn Care
-email:              dave@porttoport.ca
-address:            "7294 NS-366, Northport, NS B0L 1E0"
-phone_number:       (506)-540-0207
-description:        Servicing Port Elgin, Tidnish, Northport, Pugwash, Wallace and surrounding areas!
-author:             David Thomas
+title:              Movement Vault Chiropractic & Wellness
+address:            "6380 Lady Hammond Rd, Unit #3\nHalifax, NS B3K 2S3"
+phone_number:       902-717-2851
+fax_number:         902-334-2871
+description:        Movement Vault Chiropractic — Halifax, NS
+author:             Josie Ward
 baseurl:            ""
-url:                "https://www.porttoport.ca"
+url:                "https://www.movementvaultchiropractic.com"
 
-pin_location: "https://maps.app.goo.gl/nx8BK1oADZcFpxBW8"
+pin_location: "https://maps.app.goo.gl/zJsPiApUBjZffw4i9"
 social_profiles:
-  facebook:  Port-To-Port-Property-Maintenance-Lawn-Care-61569891131400
-  instagram: porttoport
+  instagram: Josie.the.chiro
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   G-6K0FGM8G6X

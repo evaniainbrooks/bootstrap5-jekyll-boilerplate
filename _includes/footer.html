@@ -12,7 +12,12 @@
           {% endif %}
           {% if site.phone_number %}
           <li>
-            <a href="tel:{{ site.phone_number }}">{{ site.phone_number }}</a>
+            <a href="tel:{{ site.phone_number }}">Phone: {{ site.phone_number }}</a>
+          </li>
+          {% endif %}
+          {% if site.fax_number %}
+          <li>
+            Fax: {{ site.fax_number }}
           </li>
           {% endif %}
           {% if site.address %}
@@ -42,17 +47,7 @@
             </a>
           </li>
           {% endif %}
-          {% if site.social_profiles.facebook %}
-          <li class="list-inline-item me-0">
-            <a href="https://www.facebook.com/{{ site.social_profiles.facebook }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.social_profiles.linkedin %}
+{% if site.social_profiles.linkedin %}
           <li class="list-inline-item me-0">
             <a href="https://www.linkedin.com/in/{{ site.social_profiles.linkedin }}">
               <span class="fa-stack fa-lg">
